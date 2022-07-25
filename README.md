@@ -1,5 +1,5 @@
-# JS Group Capstone Project
-> Leaderboard provides two functions:
+# Pokeverse
+> Pokeverse provides two functions:
 > 1. displays the list of the users and their scores fetching from the API and
 > 2. adds the new user and the score to the API.
 ## Built With
@@ -10,7 +10,7 @@
 
 ## Live Demo
 
-[Leaderboard](https://htetnaing0814.github.io/Leaderboard/)
+[Pokeverse](https://htetnaing0814.github.io/Pokeverse/)
 
 ## Getting Started
 
@@ -18,11 +18,11 @@ To get a local copy up and running:
 
 1. Clone this repository or download the zip folder:
 
-**``git clone https://github.com/HtetNaing0814/leaderboard.git``**
+**``git clone https://github.com/HtetNaing0814/Pokeverse.git``**
 
 2. Navigate to the location of the folder in your machine:
 
-**``you@your-Pc-name:~$ cd Leaderboard``**
+**``you@your-Pc-name:~$ cd Pokeverse``**
 
 3. Open the project with VScode:
 
@@ -42,7 +42,7 @@ To get a local copy up and running:
 
 ### Deployment
 
-Here is the online version of [Leaderboard](https://htetnaing0814.github.io/leaderboard/)
+Here is the online version of [Pokeverse](https://htetnaing0814.github.io/Pokeverse/)
 
 ## Author
 👤 - Github: [@HtetNaing0814](https://github.com/HtetNaing0814/)<br>
@@ -53,7 +53,7 @@ Here is the online version of [Leaderboard](https://htetnaing0814.github.io/lead
 ## 🤝 Contributions
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check [issue page](https://github.com/HtetNaing0814/leaderboard/issues).
+Feel free to check [issue page](https://github.com/HtetNaing0814/Pokeverse/issues).
 
 ## Show your support
 Give a ⭐️ if you like this project!
