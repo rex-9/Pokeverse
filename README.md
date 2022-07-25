@@ -1,1 +1,1 @@
-# js-capstone-project
+# js-group-capstone
