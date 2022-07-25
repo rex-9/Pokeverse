@@ -7,6 +7,7 @@
 - CSS
 - JS
 - Webpack
+- Jest
 
 ## Live Demo
 
