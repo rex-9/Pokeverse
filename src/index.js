@@ -1,6 +1,6 @@
 import load from '../modules/api.js';
-import love from '../modules/like.js';
+import { likeButton } from '../modules/like.js';
 import './style.css';
 
-load();
-love();
+await load();
+likeButton();
