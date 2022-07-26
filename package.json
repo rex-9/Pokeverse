@@ -27,6 +27,9 @@
     "gh-pages": "^4.0.0",
     "jest": "^28.1.2"
   },
+  "jest": {
+    "testEnvironment": "jsdom"
+  },
   "scripts": {
     "test": "jest",
     "watch": "jest --watchAll",

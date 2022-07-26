@@ -9,15 +9,17 @@ const load = async () => {
   const likes = await getLikes();
   for (let i = 0; i < pokemons.length; i += 1) {
     let like = likes.filter((like) => like.item_id === pokemons[i].name);
+    let heart = 'fa-regular';
     if (like.length === 0) {
-      like = 0;
+      like = '0 like';
     } else {
       like = like[0].likes;
-    }
-    if (like === 1 || like === 0) {
-      like = `${like} like`;
-    } else {
-      like = `${like} likes`;
+      heart = 'fa-solid'
+      if (like === 1) {
+        like = `${like} like`;
+      } else {
+        like = `${like} likes`;
+      }
     }
     const container = document.getElementById('container');
     container.innerHTML += `
@@ -26,8 +28,8 @@ const load = async () => {
             src=${pokemonApi + pokemons[i].image}
             alt=${pokemons[i].name}>
         <div id="title">
-            <p>${pokemons[i].name}</p>
-            <div><i id="postLike${pokemons[i].name}" class="fa-regular fa-heart"></i><br><p id="getLikes${pokemons[i].name}">${like}</p></div>
+            <div style="font-weight: bold; font-size: 20px;">${pokemons[i].name}</div>
+            <div><i style="color: red;" id="postLike${pokemons[i].name}" class="${heart} fa-heart"></i><div style="padding-top: 5px;" id="getLikes${pokemons[i].name}">${like}</div></div>
         </div>
         <button>comment</button>
     </div>`;
