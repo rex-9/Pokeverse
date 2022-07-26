@@ -1,3 +1,8 @@
+body {
+  font-family: 'Gill Sans', Courier, monospace;
+  background: linear-gradient(to top right, #00cffd, #ffffff);
+}
+
 #container {
   display: flex;
   flex-wrap: wrap;
@@ -5,10 +10,17 @@
 }
 
 #card {
-  width: 150px;
-  padding: 0 10px 0 10px;
+  width: 180px;
+  padding: 0 10px 5px 10px;
   margin: 15px;
   text-align: center;
+  background-color: azure;
+  border-radius: 10px;
+}
+
+#card:hover {
+  background: linear-gradient(to top left, #000000, #d4edfa, #0069fd);
+  color: white;
 }
 
 #image {
@@ -18,7 +30,7 @@
 
 #title {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 i {
@@ -26,8 +38,23 @@ i {
 }
 
 button {
+  margin: 5px 0 3px 0;
   cursor: pointer;
   border: 2px solid black;
+  background: none;
+  font: inherit;
+  font-weight: bold;
+  outline: inherit;
+  border-radius: 5px;
+}
+
+button:hover {
+  transform: scale(1.1);
+  color: rgb(var(--text-color));
+  border: 2px double transparent;
+  background-image: linear-gradient(#6305b0, #090916), radial-gradient(circle at left top, #ff0000, #fff000);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
 }
 
 footer {

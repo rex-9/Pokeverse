@@ -31,8 +31,7 @@ const postLike = async (name) => {
     like = like[0].likes;
   }
   const liked = document.getElementById(`getLikes${name}`);
-  liked.innerHTML = `${like} likes`;
-  // window.location.reload();
+  liked.innerHTML = `${like}likes`;
 };
 
 const likeButton = () => {
