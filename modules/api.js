@@ -14,15 +14,20 @@ const load = async () => {
         } else {
             like = like[0].likes;
         }
-    const container = document.getElementById('container');
-    container.innerHTML += `
+        if (like === 1 || like === 0) {
+            like = `${ like } like`;
+        } else {
+            like = `${ like } likes`;
+        }
+        const container = document.getElementById('container');
+        container.innerHTML += `
     <div id="card">
         <img id="image"
             src=${pokemonApi + pokemons[i].image}
             alt=${pokemons[i].name}>
         <div id="title">
             <p>${pokemons[i].name}</p>
-            <div><i id="postLike${pokemons[i].name}" class="fa-regular fa-heart"></i><br><p id="getLikes${pokemons[i].name}">${ like } likes</p></div>
+            <div><i id="postLike${pokemons[i].name}" class="fa-regular fa-heart"></i><br><p id="getLikes${pokemons[i].name}">${ like }</p></div>
         </div>
         <button>comment</button>
     </div>`;
