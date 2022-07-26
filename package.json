@@ -6,7 +6,7 @@
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.26.0",
-    "hint": "^6.2.0",
+    "hint": "^7.1.1",
     "html-webpack-plugin": "^5.5.0",
     "jest-environment-jsdom": "^28.1.2",
     "style-loader": "^3.3.1",
@@ -18,8 +18,8 @@
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.9.3"
   },
-  "name": "leaderboard",
-  "description": "Leaderboard",
+  "name": "pokeverse",
+  "description": "Pokeverse",
   "private": true,
   "version": "1.0.0",
   "main": "webpack.config.js",
@@ -36,13 +36,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HtetNaing0814/Leaderboard.git"
+    "url": "git+https://github.com/HtetNaing0814/Pokeverse.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/HtetNaing0814/Leaderboard/issues"
+    "url": "https://github.com/HtetNaing0814/Pokeverse/issues"
   },
-  "homepage": "https://github.com/HtetNaing0814/Leaderboard#readme"
+  "homepage": "https://github.com/HtetNaing0814/Pokeverse#readme"
 }

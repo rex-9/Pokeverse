@@ -1,9 +1,11 @@
 import {
-    loadPokemons,
-    lovePokemons
+    load
 } from '../modules/api';
+import {
+    love
+} from '../modules/like';
 import './style.css';
 
 
-loadPokemons();
-lovePokemons();
+load();
+love();
