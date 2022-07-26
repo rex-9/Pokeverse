@@ -59,3 +59,13 @@ ul {
   margin: 0;
   font-size: 22px;
 }
+
+.modal-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pokemon-description {
+  display: grid;
+  grid-template-columns: auto auto;
+}
