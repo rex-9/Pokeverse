@@ -1,11 +1,6 @@
-import {
-    load
-} from '../modules/api';
-import {
-    love
-} from '../modules/like';
+import load from '../modules/api.js';
+import love from '../modules/like.js';
 import './style.css';
-
 
 load();
 love();
