@@ -7,7 +7,6 @@ const pokemonApi = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/spr
 
 const load = async () => {
     const likes = await getLikes();
-    const container = document.getElementById('container');
     for (let i = 0; i < pokemons.length; i += 1) {
         let like = likes.filter(like => like.item_id === pokemons[i].name);
         if (like.length === 0) {
@@ -15,14 +14,15 @@ const load = async () => {
         } else {
             like = like[0].likes;
         }
-        container.innerHTML += `
+    const container = document.getElementById('container');
+    container.innerHTML += `
     <div id="card">
         <img id="image"
             src=${pokemonApi + pokemons[i].image}
             alt=${pokemons[i].name}>
         <div id="title">
             <p>${pokemons[i].name}</p>
-            <div><i id="like${pokemons[i].name}" class="fa-regular fa-heart"></i><br>${ like } likes</div>
+            <div><i id="postLike${pokemons[i].name}" class="fa-regular fa-heart"></i><br><p id="getLikes${pokemons[i].name}">${ like } likes</p></div>
         </div>
         <button>comment</button>
     </div>`;

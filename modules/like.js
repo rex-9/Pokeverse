@@ -22,12 +22,22 @@ const postLike = async (name) => {
 
     const req = new Request(invApi);
     await fetch(req, data);
-    window.location.reload();
+
+    const likes = await getLikes();
+        let like = likes.filter(like => like.item_id === name);
+        if (like.length === 0) {
+            like = 0;
+        } else {
+            like = like[0].likes;
+        }
+    const liked = document.getElementById(`getLikes${name}`);
+    liked.innerHTML = `${ like } likes`;
+    // window.location.reload();
 };
 
 const likeButton = () => {
     for (let i = 0; i < pokemons.length; i += 1) {
-        const love = document.getElementById(`like${pokemons[i].name}`);
+        const love = document.getElementById(`postLike${pokemons[i].name}`);
         love.addEventListener('click', () => {
             postLike(pokemons[i].name);
         });
