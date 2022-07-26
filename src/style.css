@@ -1,4 +1,37 @@
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#card {
+  width: 150px;
+  padding: 0 10px 0 10px;
+  margin: 15px;
+  text-align: center;
+}
+
+#image {
+  width: 150px;
+  height: 200px;
+}
+
+#title {
+  display: flex;
+  justify-content: space-between;
+}
+
+i {
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+  border: 2px solid black;
+}
+
 footer {
+  margin: 15px 0 15px 0;
   padding: 15px;
   border: 2px solid black;
 }
