@@ -14,7 +14,7 @@ const load = async () => {
       like = '0 like';
     } else {
       like = like[0].likes;
-      heart = 'fa-solid'
+      heart = 'fa-solid';
       if (like === 1) {
         like = `${like} like`;
       } else {
