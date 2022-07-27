@@ -14,10 +14,9 @@ const popUpMenu = () => {
       const req = new Request(`${commentApi}?item_id=${pokemon.name}`);
       const res = await fetch(req);
       let comments = await res.json();
-      if (comments.hasOwnProperty === 'error') {
+      if (comments.hasOwnProperty('error')) {
         comments = [];
       }
-
       modal.style.display = 'block';
       modal.innerHTML = `
       <img src="${pokemonApi + pokemon.image}" alt="${pokemon.name}">
