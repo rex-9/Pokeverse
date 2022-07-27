@@ -1,9 +1,9 @@
 import pokemons from './pokemons.js';
 
-const invApi = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/DYVkVDoJjOcdS6u668lb/likes';
+const likeApi = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/DYVkVDoJjOcdS6u668lb/likes';
 
 const getLikes = async () => {
-  const req = new Request(invApi);
+  const req = new Request(likeApi);
   const res = await fetch(req);
   const json = await res.json();
   return json;
@@ -20,7 +20,7 @@ const postLike = async (name) => {
     },
   };
 
-  const req = new Request(invApi);
+  const req = new Request(likeApi);
   await fetch(req, data);
 
   const likes = await getLikes();
