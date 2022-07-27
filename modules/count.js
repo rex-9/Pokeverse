@@ -8,10 +8,26 @@ const pokemonCount = () => {
         <li>Nature</li>
         <li>Contest</li>`;
   mobileTotal.innerHTML += `
-  <li class="mobile-li" style="text-decoration: underline; font-weight: bold;">Pokemons(${pokemons.length})</li>
+  <li id="mobile-pokemons" class="mobile-li" style="text-decoration: underline; font-weight: bold;">Pokemons(${pokemons.length})</li>
   <li class="mobile-li">Nature</li>
   <li class="mobile-li">Contest</li>`;
   return pokemons.length;
 };
 
-export default pokemonCount;
+const commentApi = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/DYVkVDoJjOcdS6u668lb/comments';
+
+const commentCount = (pokemon) => {
+  const commentBtn = document.getElementById(`comment${pokemon}`);
+  commentBtn.addEventListener('click', async () => {
+    const req = new Request(`${commentApi}?item_id=${pokemon}`);
+    const res = await fetch(req);
+    let comments = await res.json();
+    if (comments.hasOwnProperty === 'error') {
+      comments = [];
+    }
+    document.getElementById('commentCount').innerHTML = `Comments(${comments.length})`;
+    return comments.length;
+  });
+};
+
+export { pokemonCount, commentCount };

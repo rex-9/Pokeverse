@@ -11,6 +11,13 @@ const popUpMenu = () => {
   pokemons.forEach((pokemon) => {
     const commentBtn = document.getElementById(`comment${pokemon.name}`);
     commentBtn.addEventListener('click', async () => {
+      const req = new Request(`${commentApi}?item_id=${pokemon.name}`);
+      const res = await fetch(req);
+      let comments = await res.json();
+      if (comments.hasOwnProperty === 'error') {
+        comments = [];
+      }
+
       modal.style.display = 'block';
       modal.innerHTML = `
       <img src="${pokemonApi + pokemon.image}" alt="${pokemon.name}">
@@ -26,7 +33,7 @@ const popUpMenu = () => {
             </ul>
           </div>
           <div id="comment">
-            <h3>Comments(2)</h3>
+            <h3 id="commentCount">Comments(${comments.length})</h3>
             <div style="display: flex; width: 100%; justify-content: space-between;">
               <ul id="dates" style="text-align: start;">
 
@@ -48,12 +55,6 @@ const popUpMenu = () => {
         </div>
       `;
 
-      const req = new Request(commentApi + `?item_id=${pokemon.name}`);
-      const res = await fetch(req);
-      let comments = await res.json();
-      if (comments.hasOwnProperty === 'error') {
-        comments = [];
-      }
       const dateContainer = document.getElementById('dates');
       const usernameContainer = document.getElementById('usernames');
       const insightContainer = document.getElementById('comments');
@@ -67,7 +68,7 @@ const popUpMenu = () => {
         const insight = document.createElement('li');
         insight.innerHTML = comment.comment;
         insightContainer.appendChild(insight);
-      })
+      });
 
       const cancel = document.getElementById('cancel-btn');
       cancel.addEventListener('click', () => {
@@ -102,7 +103,7 @@ const popUpMenu = () => {
         const newInsight = document.createElement('li');
         newInsight.innerHTML = insight.value;
         insightContainer.appendChild(newInsight);
-        
+
         username.value = '';
         insight.value = '';
       });
