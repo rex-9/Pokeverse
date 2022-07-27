@@ -1,6 +1,6 @@
 /* eslint-disable import/no-unresolved */
 /* eslint-disable import/extensions */
-import pokemon from '../assets/pokemon.png';
+import pokemon from '../Assets/pokemon.png';
 
 const mobile = () => {
   const brandContainer = document.querySelector('.logo-container');
