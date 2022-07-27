@@ -5,6 +5,17 @@
 > 1. displays the list of the users and their scores fetching from the API and
 > 2. adds the new user and the score to the API.
 
+## Screenshots
+
+- **Desktop Home Screen**
+
+![Desktop Home Screen](./Assets/desktop-view.png)
+
+- **Mobile Home Screen**
+
+![Mobile Home Screen](./Assets/MOBILE-VIEW.png)
+
+
 ## Built With
 
 - HTML
