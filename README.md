@@ -1,19 +1,27 @@
 # Pokeverse
 
-> Pokeverse provides two functions:
+> The amazing Pokeverse presents you the following:
 >
-> 1. displays the list of the users and their scores fetching from the API and
-> 2. adds the new user and the score to the API.
+> 1. displays the list of the Pokemons and their abilities fetched from the [Pokeapi](https://pokeapi.co)
+> 2. Users can like and comment about the pokemons. Like and comment features are provided by the [InvolvementApi](https://www.notion.so/Involvement-API-869e60b5ad104603aa6db59e08150270)
 
 ## Screenshots
 
 - **Desktop Home Screen**
 
-![Desktop Home Screen](./Assets/desktop-view.png)
+![Desktop Home Screen](./assets/desktop-view.png)
 
 - **Mobile Home Screen**
 
-![Mobile Home Screen](./Assets/MOBILE-VIEW.png)
+![Mobile Home Screen](./assets/mobile-view.png)
+
+- **Hovered Pokemon Card**
+
+![Hovered Pokemon Card](./assets/card-hover.png)
+
+- **Detail of the pokemon**
+
+![Detail of the pokemon](./assets/detail.png)
 
 
 ## Built With
@@ -52,7 +60,11 @@ To get a local copy up and running:
 
 **`npm run build`**
 
-5. Run the webpack dev server:
+5. Initialize the webpack config file:
+
+**`npx webpack`**
+
+6. Run the webpack dev server:
 
 **`npm run start`**
 
