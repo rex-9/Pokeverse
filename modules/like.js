@@ -1,9 +1,9 @@
 import pokemons from './pokemons.js';
 
-const invApi = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/DYVkVDoJjOcdS6u668lb/likes';
+const likeApi = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/Ia58UmcsbOOzLVcpoayr/likes';
 
 const getLikes = async () => {
-  const req = new Request(invApi);
+  const req = new Request(likeApi);
   const res = await fetch(req);
   const json = await res.json();
   return json;
@@ -20,18 +20,26 @@ const postLike = async (name) => {
     },
   };
 
-  const req = new Request(invApi);
+  const req = new Request(likeApi);
   await fetch(req, data);
 
   const likes = await getLikes();
   let like = likes.filter((like) => like.item_id === name);
   if (like.length === 0) {
-    like = 0;
+    like = '0 like';
   } else {
     like = like[0].likes;
+    if (like === 1) {
+      like = `${like} like`;
+    } else {
+      like = `${like} likes`;
+    }
   }
   const liked = document.getElementById(`getLikes${name}`);
-  liked.innerHTML = `${like}likes`;
+  liked.innerHTML = `${like}`;
+  const title = document.getElementById(`postLike${name}`);
+  title.classList.remove('fa-regular');
+  title.classList.add('fa-solid');
 };
 
 const likeButton = () => {
@@ -43,4 +51,7 @@ const likeButton = () => {
   }
 };
 
-export { likeButton, getLikes };
+export {
+  likeButton,
+  getLikes,
+};
