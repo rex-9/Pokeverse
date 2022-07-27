@@ -14,7 +14,7 @@ const pokemonCount = () => {
   return pokemons.length;
 };
 
-const commentApi = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/DYVkVDoJjOcdS6u668lb/comments';
+const commentApi = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/Ia58UmcsbOOzLVcpoayr/comments';
 
 const commentCount = (pokemon) => {
   const commentBtn = document.getElementById(`comment${pokemon}`);

@@ -4,7 +4,7 @@ import {
 } from './load.js';
 import pokemons from './pokemons.js';
 
-const commentApi = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/DYVkVDoJjOcdS6u668lb/comments';
+const commentApi = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/Ia58UmcsbOOzLVcpoayr/comments';
 const pokeApi = 'https://pokeapi.co/api/v2/pokemon/';
 
 const popUpMenu = () => {
