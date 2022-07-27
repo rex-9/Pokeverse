@@ -4,6 +4,7 @@ import {
 import pokemons from './pokemons.js';
 
 const commentApi = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/DYVkVDoJjOcdS6u668lb/comments';
+const pokeApi = 'https://pokeapi.co/api/v2/pokemon/';
 
 const popUpMenu = () => {
   const modal = document.getElementById('modal');
@@ -11,6 +12,11 @@ const popUpMenu = () => {
   pokemons.forEach((pokemon) => {
     const commentBtn = document.getElementById(`comment${pokemon.name}`);
     commentBtn.addEventListener('click', async () => {
+
+      const pokeReq = new Request(`${pokeApi}${pokemon.name.toLowerCase()}`);
+      const pokeRes = await fetch(pokeReq);
+      let pokeData = await pokeRes.json();
+
       const req = new Request(`${commentApi}?item_id=${pokemon.name}`);
       const res = await fetch(req);
       let comments = await res.json();
@@ -23,12 +29,9 @@ const popUpMenu = () => {
         <button id="cancel-btn">&times;</button>
         <div id="body">
           <div id="details">
-            <h2 id="pokemon-name">${pokemon.name}</h2>
-            <ul id="pokemon-description">
-              <li>Power1: Titanum</li>
-              <li>Power2: 400</li>
-              <li>Power3: 10000</li>
-              <li>Power4: 100000</li>
+            <h2 id="name">${pokemon.name}</h2>
+            <ul id="abilities">
+
             </ul>
           </div>
           <div id="comment">
@@ -47,12 +50,19 @@ const popUpMenu = () => {
           </div>
           <div id="form">
             <h3>Add a comment</h3>
-            <input type="text" name="username" id="username" placeholder="Your Name"><br>
-            <textarea name="insight" id="insight" placeholder="Your Insights" cols="30" rows="5"></textarea><br>
+            <input required type="text" name="username" id="username" placeholder="Your Name"><br>
+            <textarea required name="insight" id="insight" placeholder="Your Insights" cols="30" rows="5"></textarea><br>
             <button id="comment-btn">comment</button>
           </div>
         </div>
       `;
+
+      const abilities = document.getElementById('abilities')
+      pokeData.abilities.forEach((ability) => {
+        const move = document.createElement('li');
+        move.innerHTML = ability.ability.name;
+        abilities.appendChild(move);
+      })
 
       const dateContainer = document.getElementById('dates');
       const usernameContainer = document.getElementById('usernames');
@@ -79,32 +89,44 @@ const popUpMenu = () => {
         }
       });
       const comment = document.getElementById('comment-btn');
+
+      const username = document.getElementById('username');
+      const insight = document.getElementById('insight');
       comment.addEventListener('click', async () => {
-        const username = document.getElementById('username');
-        const insight = document.getElementById('insight');
-        const data = {
-          method: 'POST',
-          body: JSON.stringify({
-            item_id: pokemon.name,
-            username: username.value,
-            comment: insight.value,
-          }),
-          headers: {
-            'Content-type': 'application/json; charset=UTF-8',
-          },
-        };
-        const req = new Request(commentApi);
-        await fetch(req, data);
+        if (username.value === '' || insight.value === '') {
 
-        const newUsername = document.createElement('li');
-        newUsername.innerHTML = username.value;
-        usernameContainer.appendChild(newUsername);
-        const newInsight = document.createElement('li');
-        newInsight.innerHTML = insight.value;
-        insightContainer.appendChild(newInsight);
+          const form = document.getElementById('form');
+          const error = document.createElement('p');
+          error.id = 'error';
+          error.style.cssText = 'color: red; font-weight: bold;';
+          error.innerHTML = 'Form should not be empty!'
+          form.appendChild(error)
+        } else {
+          const data = {
+            method: 'POST',
+            body: JSON.stringify({
+              item_id: pokemon.name,
+              username: username.value,
+              comment: insight.value,
+            }),
+            headers: {
+              'Content-type': 'application/json; charset=UTF-8',
+            },
+          };
+          const req = new Request(commentApi);
+          await fetch(req, data);
 
-        username.value = '';
-        insight.value = '';
+          const newUsername = document.createElement('li');
+          newUsername.innerHTML = username.value;
+          usernameContainer.appendChild(newUsername);
+          const newInsight = document.createElement('li');
+          newInsight.innerHTML = insight.value;
+          insightContainer.appendChild(newInsight);
+
+          username.value = '';
+          insight.value = '';
+        }
+
       });
     });
   });

@@ -8,9 +8,9 @@ const pokemonCount = () => {
         <li>Nature</li>
         <li>Contest</li>`;
   mobileTotal.innerHTML += `
-  <li id="mobile-pokemons" class="mobile-li" style="text-decoration: underline; font-weight: bold;">Pokemons(${pokemons.length})</li>
-  <li class="mobile-li">Nature</li>
-  <li class="mobile-li">Contest</li>`;
+  <li id="mobile-pokemons" style="text-decoration: underline; font-weight: bold;">Pokemons(${pokemons.length})</li>
+  <li>Nature</li>
+  <li>Contest</li>`;
   return pokemons.length;
 };
 
