@@ -19,4 +19,3 @@ cancelBtn.addEventListener("click", () => {
 load();
 love();
 popUpMenu();
-displayMenu();
