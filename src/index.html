@@ -13,11 +13,27 @@
   <body>
     <header>
       <nav class="my-nav">
+        <div class="mobile-menu">
+          <ul class="mobile-nav-menu">
+            <li class="mobile-li">Pokemon</li>
+            <li class="mobile-li">Nature</li>
+            <li class="mobile-li">Contest</li>
+          </ul>
+          <ul>
+            <li class="cancel">&times;</li>
+          </ul>
+        </div>
+        <!-- mobile menu -->
         <ul class="nav-ul">
           <li class="nav-brand">
             <p class="brand">POKEMON</p>
           </li>
-          <li>
+          <li class="bars">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </li>
+          <li class="nav-content-li">
             <ul class="nav-content">
               <li>Pokemon</li>
               <li>Nature</li>
@@ -29,23 +45,7 @@
     </header>
     <main>
       <!-- my-modal -->
-      <div class="modal-container">
-        <div class="modal-top">
-          <div class="modal-img"></div>
-          <button class="cancel-btn">&times;</button>
-        </div>
-        <div class="modal-body">
-          <div class="modal-details">
-            <h2 class="pokemon-name">Space 3</h2>
-            <ul class="pokemon-description">
-              <li>fuel: Titanum</li>
-              <li>weight: 400</li>
-              <li>length: 10000</li>
-              <li>Power: 100000</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      <div class="modal-container"></div>
       <!-- modal-end -->
       <section id="container">
         <!-- pokemon cards -->
