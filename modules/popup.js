@@ -1,3 +1,4 @@
+/* eslint-disable no-prototype-builtins */
 import {
   pokemonApi,
 } from './load.js';
@@ -12,10 +13,9 @@ const popUpMenu = () => {
   pokemons.forEach((pokemon) => {
     const commentBtn = document.getElementById(`comment${pokemon.name}`);
     commentBtn.addEventListener('click', async () => {
-
       const pokeReq = new Request(`${pokeApi}${pokemon.name.toLowerCase()}`);
       const pokeRes = await fetch(pokeReq);
-      let pokeData = await pokeRes.json();
+      const pokeData = await pokeRes.json();
 
       const req = new Request(`${commentApi}?item_id=${pokemon.name}`);
       const res = await fetch(req);
@@ -57,12 +57,12 @@ const popUpMenu = () => {
         </div>
       `;
 
-      const abilities = document.getElementById('abilities')
+      const abilities = document.getElementById('abilities');
       pokeData.abilities.forEach((ability) => {
         const move = document.createElement('li');
         move.innerHTML = ability.ability.name;
         abilities.appendChild(move);
-      })
+      });
 
       const dateContainer = document.getElementById('dates');
       const usernameContainer = document.getElementById('usernames');
@@ -94,13 +94,12 @@ const popUpMenu = () => {
       const insight = document.getElementById('insight');
       comment.addEventListener('click', async () => {
         if (username.value === '' || insight.value === '') {
-
           const form = document.getElementById('form');
           const error = document.createElement('p');
           error.id = 'error';
           error.style.cssText = 'color: red; font-weight: bold;';
-          error.innerHTML = 'Form should not be empty!'
-          form.appendChild(error)
+          error.innerHTML = 'Form should not be empty!';
+          form.appendChild(error);
         } else {
           const data = {
             method: 'POST',
@@ -126,7 +125,6 @@ const popUpMenu = () => {
           username.value = '';
           insight.value = '';
         }
-
       });
     });
   });
