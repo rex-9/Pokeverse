@@ -1,3 +1,5 @@
+/* eslint-disable import/no-unresolved */
+/* eslint-disable import/extensions */
 import pokemon from '../assets/pokemon.png';
 
 const mobile = () => {
