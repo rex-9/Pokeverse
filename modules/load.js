@@ -31,9 +31,9 @@ const load = async () => {
             <div style="font-weight: bold; font-size: 20px;">${pokemons[i].name}</div>
             <div><i style="color: red;" id="postLike${pokemons[i].name}" class="${heart} fa-heart"></i><div style="padding-top: 5px;" id="getLikes${pokemons[i].name}">${like}</div></div>
         </div>
-        <button>comment</button>
+        <button id="comment${pokemons[i].name}">comment</button>
     </div>`;
   }
 };
 
-export default load;
+export { load, pokemonApi };

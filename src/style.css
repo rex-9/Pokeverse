@@ -9,6 +9,14 @@ body {
   padding: 0;
 }
 
+input,
+textarea {
+  width: 250px;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
 #container {
   display: flex;
   flex-wrap: wrap;
@@ -16,7 +24,7 @@ body {
 }
 
 #card {
-  width: 200px;
+  width: 210px;
   padding: 0 10px 5px 10px;
   margin: 15px;
   text-align: center;
@@ -56,7 +64,7 @@ button {
 
 button:hover {
   transform: scale(1.1);
-  color: rgb(var(--text-color));
+  color: white;
   border: 2px double transparent;
   background-image: linear-gradient(#6305b0, #090916), radial-gradient(circle at left top, #f00, #fff000);
   background-origin: border-box;
@@ -136,23 +144,52 @@ ul {
   font-size: 22px;
 }
 
-.modal-top {
-  display: flex;
-  justify-content: space-between;
-}
-
 .pokemon-description {
   display: grid;
   grid-template-columns: auto auto;
 }
 
-.modal-container {
+#modal-container {
+  display: flex;
+  justify-content: center;
+}
+
+#modal {
   display: none;
+  justify-content: center;
   position: fixed;
-  width: 60%;
-  height: 70vh;
+  top: 10px;
   background-color: antiquewhite;
-  padding: 20px;
+  padding: 10px 20px 5px 20px;
+  text-align: center;
+  overflow-y: auto;
+  height: 97%;
+}
+
+#modal img {
+  width: 250px;
+}
+
+#cancel-btn {
+  float: right;
+}
+
+#pokemon-description {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 400px;
+}
+
+#pokemon-description li {
+  width: 150px;
+  text-align: start;
+}
+
+#modal #body #details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 @media (min-width: 768px) {
