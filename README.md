@@ -61,7 +61,7 @@ Here is the online version of [Pokeverse](https://htetnaing0814.github.io/Pokeve
 👤 - Github: [@Ibizugbe](https://github.com/Ibizugbe/)<br>
 👤 - LinkedIn: [Abraham Ibizugbe](https://www.linkedin.com/in/abraham-ibizugbe-763791115/)<br>
 👤 - Facebook: [Abraham Ibizugbe 0'Ibiz](https://web.facebook.com/aibizugbe)<br>
-👤 - Angelist: [abrahamibizugbe]()<br>
+👤 - Twitter: [Abrahamibizugbe](https://twitter.com/AbrahamIbizugbe)<br>
 
 ## 🤝 Contributions
 
