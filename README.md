@@ -9,19 +9,19 @@
 
 - **Desktop Home Screen**
 
-![Desktop Home Screen](./assets/desktop-view.png)
+![Desktop Home Screen](./Assets/desktop-view.png)
 
 - **Mobile Home Screen**
 
-![Mobile Home Screen](./assets/mobile-view.png)
+![Mobile Home Screen](./Assets/mobile-view.png)
 
 - **Hovered Pokemon Card**
 
-![Hovered Pokemon Card](./assets/card-hover.png)
+![Hovered Pokemon Card](./Assets/card-hover.png)
 
 - **Detail of the pokemon**
 
-![Detail of the pokemon](./assets/detail.png)
+![Detail of the pokemon](./Assets/detail.png)
 
 
 ## Built With
