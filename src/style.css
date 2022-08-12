@@ -154,8 +154,7 @@ ul {
   justify-content: center;
   position: fixed;
   top: 10px;
-  background: linear-gradient(to top left, #000, #d4edfa, #0069fd);
-  background-image: linear-gradient(to bottom right, red, orange, yellow, green, blue, indigo, violet);
+  background-image: linear-gradient(to bottom right, pink, orange, yellow, lightgreen, cyan, lightpink, violet);
   color: white;
   border-radius: 10px;
   padding: 10px 20px 5px 20px;

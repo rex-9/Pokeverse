@@ -93,13 +93,16 @@ const modal = () => {
       const username = document.getElementById('username');
       const insight = document.getElementById('insight');
       comment.addEventListener('click', async () => {
-        if (username.value === '' || insight.value === '') {
+        const existingError = document.getElementById('error');
+        if (username.value === '' || insight.value === '' ) {
           const form = document.getElementById('form');
-          const error = document.createElement('p');
-          error.id = 'error';
-          error.style.cssText = 'color: red; font-weight: bold;';
-          error.innerHTML = 'Form should not be empty!';
-          form.appendChild(error);
+          if (existingError === null) {
+            const error = document.createElement('p');
+            error.id = 'error';
+            error.style.cssText = 'color: red; font-weight: bold;';
+            error.innerHTML = 'Form should not be empty!';
+            form.appendChild(error);
+          }
         } else {
           const data = {
             method: 'POST',
