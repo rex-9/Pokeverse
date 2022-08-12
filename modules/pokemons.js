@@ -25,6 +25,114 @@ const pokemons = [{
 }, {
   name: 'Venusaur',
   image: '3.svg',
+}, {
+  name: 'Onix',
+  image: '95.svg',
+}, {
+  name: 'Snorlax',
+  image: '143.svg',
+}, {
+  name: 'Gyarados',
+  image: '130.svg',
+}, {
+  name: 'Dratini',
+  image: '147.svg',
+}, {
+  name: 'Dragonair',
+  image: '148.svg',
+}, {
+  name: 'Dragonite',
+  image: '149.svg',
+}, {
+  name: 'Mew',
+  image: '151.svg',
+}, {
+  name: 'MewTwo',
+  image: '150.svg',
+}, {
+  name: 'Chikorita',
+  image: '152.svg',
+}, {
+  name: 'Bayleef',
+  image: '153.svg',
+}, {
+  name: 'Meganium',
+  image: '154.svg',
+}, {
+  name: 'Cyndaquil',
+  image: '155.svg',
+}, {
+  name: 'Quilava',
+  image: '156.svg',
+}, {
+  name: 'Typhlosion',
+  image: '157.svg',
+}, {
+  name: 'Totodile',
+  image: '158.svg',
+}, {
+  name: 'Croconaw',
+  image: '159.svg',
+}, {
+  name: 'Feraligatr',
+  image: '160.svg',
+}, {
+  name: 'Pikachu',
+  image: '25.svg',
+}, {
+  name: 'Raichu',
+  image: '26.svg',
+}, {
+  name: 'Chimchar',
+  image: '390.svg',
+}, {
+  name: 'Monferno',
+  image: '391.svg',
+}, {
+  name: 'Infernape',
+  image: '392.svg',
+}, {
+  name: 'Piplup',
+  image: '393.svg',
+}, {
+  name: 'Prinplup',
+  image: '394.svg',
+}, {
+  name: 'Empoleon',
+  image: '395.svg',
+}, {
+  name: 'Luxio',
+  image: '404.svg',
+}, {
+  name: 'Luxray',
+  image: '405.svg',
+}, {
+  name: 'Riolu',
+  image: '447.svg',
+}, {
+  name: 'Lucario',
+  image: '448.svg',
+}, {
+  name: 'Gible',
+  image: '443.svg',
+}, {
+  name: 'Gabite',
+  image: '444.svg',
+}, {
+  name: 'Garchomp',
+  image: '445.svg',
+}, {
+  name: 'Eevee',
+  image: '133.svg',
+}, {
+  name: 'Vaporeon',
+  image: '134.svg',
+}, {
+  name: 'Jolteon',
+  image: '135.svg',
+}, {
+  name: 'Flareon',
+  image: '136.svg',
 }];
 
 export default pokemons;

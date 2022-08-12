@@ -131,8 +131,7 @@ ul {
 
 .nav-content {
   display: flex;
-  justify-content: space-between;
-  gap: 40px;
+  justify-content: space-around;
 }
 
 .nav-content-li {
@@ -156,11 +155,13 @@ ul {
   position: fixed;
   top: 10px;
   background: linear-gradient(to top left, #000, #d4edfa, #0069fd);
+  background-image: linear-gradient(to bottom right, red, orange, yellow, green, blue, indigo, violet);
+  color: white;
   border-radius: 10px;
   padding: 10px 20px 5px 20px;
+  margin: 50px;
   text-align: center;
   overflow: auto;
-  height: 97%;
   z-index: 10;
 }
 
@@ -196,6 +197,15 @@ ul {
   align-items: center;
 }
 
+#modal #abilities {
+  color: black;
+}
+
+#modal button {
+  color: white;
+  border: 1px solid white;
+}
+
 @media (min-width: 768px) {
   .menu {
     display: none;
@@ -214,18 +224,27 @@ ul {
     padding: 0 10px 0 10px;
   }
 
+  #modal-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  #modal #abilities {
+    color: black;
+  }
+
   #modal {
     display: none;
     justify-content: center;
     width: auto;
     position: fixed;
     top: 10px;
-    background: linear-gradient(to top left, #000, #d4edfa, #0069fd);
+    background-image: linear-gradient(to bottom right, red, orange, yellow, green, blue, indigo, violet);
     border-radius: 10px;
-    padding: 10px 20px 5px 20px;
+    color: white;
+    padding: 25px;
     text-align: center;
     overflow-y: auto;
-    height: 97%;
     z-index: 10;
   }
 }

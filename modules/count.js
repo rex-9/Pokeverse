@@ -4,13 +4,9 @@ const pokemonCount = () => {
   const total = document.querySelector('.nav-content');
   const mobileTotal = document.querySelector('.mobile-nav-menu');
   total.innerHTML += `
-        <li id="pokemons" style="text-decoration: underline; font-weight: bold;">Pokemons(${pokemons.length})</li>
-        <li>Nature</li>
-        <li>Contest</li>`;
+        <li id="pokemons" style="text-decoration: underline; font-weight: bold;">Pokemons(${pokemons.length})</li>`;
   mobileTotal.innerHTML += `
-  <li id="mobile-pokemons" style="text-decoration: underline; font-weight: bold;">Pokemons(${pokemons.length})</li>
-  <li>Nature</li>
-  <li>Contest</li>`;
+  <li id="mobile-pokemons" style="text-decoration: underline; font-weight: bold;">Pokemons(${pokemons.length})</li>`;
   return pokemons.length;
 };
 

@@ -7,7 +7,7 @@ import pokemons from './pokemons.js';
 const commentApi = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/Ia58UmcsbOOzLVcpoayr/comments';
 const pokeApi = 'https://pokeapi.co/api/v2/pokemon/';
 
-const popUpMenu = () => {
+const modal = () => {
   const modal = document.getElementById('modal');
 
   pokemons.forEach((pokemon) => {
@@ -29,7 +29,7 @@ const popUpMenu = () => {
         <button id="cancel-btn">&times;</button>
         <div id="body">
           <div id="details">
-            <h2 id="name">${pokemon.name}</h2>
+            <h1 id="name">${pokemon.name}</h1>
             <ul id="abilities">
 
             </ul>
@@ -130,4 +130,4 @@ const popUpMenu = () => {
   });
 };
 
-export default popUpMenu;
+export default modal;
