@@ -94,7 +94,7 @@ const modal = () => {
       const insight = document.getElementById('insight');
       comment.addEventListener('click', async () => {
         const existingError = document.getElementById('error');
-        if (username.value === '' || insight.value === '' ) {
+        if (username.value === '' || insight.value === '') {
           const form = document.getElementById('form');
           if (existingError === null) {
             const error = document.createElement('p');

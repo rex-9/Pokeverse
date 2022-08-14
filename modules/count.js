@@ -1,12 +1,14 @@
 import pokemons from './pokemons.js';
 
 const pokemonCount = () => {
-  const total = document.querySelector('.nav-content');
-  const mobileTotal = document.querySelector('.mobile-nav-menu');
-  total.innerHTML += `
-        <li id="pokemons" style="text-decoration: underline; font-weight: bold;">Pokemons(${pokemons.length})</li>`;
-  mobileTotal.innerHTML += `
-  <li id="mobile-pokemons" style="text-decoration: underline; font-weight: bold;">Pokemons(${pokemons.length})</li>`;
+  const nav = document.querySelector('.nav');
+  const mobileNav = document.querySelector('.mobile-nav');
+  nav.innerHTML += `
+        <li class="pokemons">Pokemons(${pokemons.length})</li>
+        <li class="about">About</li>`;
+  mobileNav.innerHTML += `
+  <li class="mobile-pokemons">Pokemons(${pokemons.length})</li>
+  <li class="mobile-about">About</li>`;
   return pokemons.length;
 };
 

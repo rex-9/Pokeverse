@@ -1,10 +1,10 @@
 import { pokemonCount, commentCount } from '../modules/count.js';
 
 document.body.innerHTML = `
-<ul class="nav-content">
+<ul class="nav">
 
 </ul>
-<ul class="mobile-nav-menu">
+<ul class="mobile-nav">
 
 </ul>
 

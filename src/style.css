@@ -7,6 +7,7 @@ body {
   background: linear-gradient(to top right, #00cffd, #fff);
   margin: 0;
   padding: 0;
+  height: 100vh;
 }
 
 input,
@@ -17,15 +18,49 @@ textarea {
   margin-bottom: 5px;
 }
 
-#container {
-  display: flex;
+#pokemons-container {
+  /* display: flex; */
+  display: none;
   flex-wrap: wrap;
   justify-content: center;
 }
 
+#about {
+  /* display: none; */
+  display: block;
+  height: 83vh;
+}
+
+#about #footer {
+  width: 100%;
+  position: absolute;
+  bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#about #bio {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 100px;
+  line-height: 20px;
+}
+
+#about #footer a {
+  width: 50px;
+  height: 50px;
+  border-bottom: 1px solid black;
+}
+
+.whatsmail {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
 #card {
   width: 210px;
-  padding: 0 10px 5px 10px;
   margin: 15px;
   text-align: center;
   background-color: azure;
@@ -34,12 +69,19 @@ textarea {
 
 #card:hover {
   background: linear-gradient(to top left, #000, #d4edfa, #0069fd);
-  color: white;
+  transform: scale(1.1);
 }
 
 #image {
   width: 150px;
   height: 200px;
+}
+
+#content {
+  padding: 10px 10px 5px 10px;
+  border-radius: 0 0 10px 10px;
+  background-color: #1d1f26;
+  color: white;
 }
 
 #title {
@@ -51,10 +93,15 @@ i {
   cursor: pointer;
 }
 
+i:hover {
+  transform: scale(1.5);
+}
+
 button {
   margin: 5px 0 3px 0;
   cursor: pointer;
-  border: 2px solid black;
+  border: 2px solid white;
+  color: white;
   background: none;
   font: inherit;
   font-weight: bold;
@@ -99,12 +146,13 @@ ul {
   cursor: pointer;
 }
 
-.mobile-nav-menu {
+.mobile-nav {
   display: flex;
   gap: 30px;
-  padding: 20px;
+  padding: 20px 0 20px 50px;
   flex-direction: column;
   justify-content: center;
+  font-size: 18px;
 }
 
 .mobile-menu {
@@ -112,6 +160,15 @@ ul {
   justify-content: space-between;
   background-color: rgba(255, 255, 255, 0.5);
   color: black;
+}
+
+.pokemons,
+.about,
+.mobile-pokemons,
+.mobile-about {
+  text-decoration: underline;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .cancel {
@@ -129,9 +186,11 @@ ul {
   border: 2px solid;
 }
 
-.nav-content {
+.nav {
   display: flex;
   justify-content: space-around;
+  font-size: 18px;
+  width: 500px;
 }
 
 .nav-content-li {
@@ -150,26 +209,31 @@ ul {
 
 #modal {
   display: none;
-  width: 100%;
+  background-image: linear-gradient(to bottom right, red, orange, yellow, green, blue, indigo, violet);
   justify-content: center;
   position: fixed;
-  top: 10px;
-  background-image: linear-gradient(to bottom right, pink, orange, yellow, lightgreen, cyan, lightpink, violet);
-  color: white;
+  top: 80px;
+  color: black;
   border-radius: 10px;
-  padding: 10px 20px 5px 20px;
-  margin: 50px;
   text-align: center;
   overflow: auto;
   z-index: 10;
 }
 
 #modal img {
+  /* background-image: linear-gradient(to bottom right, pink, orange, yellow, lightgreen, cyan, lightpink, violet); */
   width: 250px;
 }
 
 #cancel-btn {
   float: right;
+  margin-right: 10px;
+}
+
+#modal #body {
+  color: white;
+  background-color: #1d1f26;
+  padding: 0 20px 10px 20px;
 }
 
 #abilities {
@@ -196,15 +260,6 @@ ul {
   align-items: center;
 }
 
-#modal #abilities {
-  color: black;
-}
-
-#modal button {
-  color: white;
-  border: 1px solid white;
-}
-
 @media (min-width: 768px) {
   .menu {
     display: none;
@@ -223,27 +278,38 @@ ul {
     padding: 0 10px 0 10px;
   }
 
-  #modal-container {
-    display: flex;
-    justify-content: center;
-  }
-
-  #modal #abilities {
-    color: black;
-  }
-
   #modal {
     display: none;
     justify-content: center;
-    width: auto;
     position: fixed;
     top: 10px;
-    background-image: linear-gradient(to bottom right, red, orange, yellow, green, blue, indigo, violet);
     border-radius: 10px;
-    color: white;
-    padding: 25px;
+    background-color: white;
+    color: black;
+    padding-top: 25px;
     text-align: center;
     overflow-y: auto;
     z-index: 10;
+  }
+
+  #about #footer {
+    padding: 5px 0 5px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-bottom: 0;
+  }
+
+  #about #footer a {
+    width: 50px;
+    height: 50px;
+    border-bottom: 0;
+  }
+
+  .whatsmail {
+    display: flex;
+    align-items: center;
+    border-bottom: 0;
   }
 }
