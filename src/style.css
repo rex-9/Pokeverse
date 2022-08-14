@@ -20,6 +20,7 @@ textarea {
 
 #pokemons-container {
   display: flex;
+
   /* display: none; */
   flex-wrap: wrap;
   justify-content: center;
@@ -27,6 +28,7 @@ textarea {
 
 #about {
   display: none;
+
   /* display: block; */
   height: 83vh;
 }
