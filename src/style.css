@@ -19,15 +19,15 @@ textarea {
 }
 
 #pokemons-container {
-  /* display: flex; */
-  display: none;
+  display: flex;
+  /* display: none; */
   flex-wrap: wrap;
   justify-content: center;
 }
 
 #about {
-  /* display: none; */
-  display: block;
+  display: none;
+  /* display: block; */
   height: 83vh;
 }
 
@@ -221,7 +221,6 @@ ul {
 }
 
 #modal img {
-  /* background-image: linear-gradient(to bottom right, pink, orange, yellow, lightgreen, cyan, lightpink, violet); */
   width: 250px;
 }
 
