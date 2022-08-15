@@ -295,6 +295,13 @@ ul {
     z-index: 10;
   }
 
+  #abilities {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 500px;
+  }
+
   #about #bio {
     font-size: 20px;
     font-weight: bold;

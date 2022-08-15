@@ -7,22 +7,17 @@
 
 ## Screenshots
 
-- **Desktop Home Screen**
+- **Pokemons Page**
 
-![Desktop Home Screen](./Assets/desktop-view.png)
-
-- **Mobile Home Screen**
-
-![Mobile Home Screen](./Assets/mobile-view.png)
-
-- **Hovered Pokemon Card**
-
-![Hovered Pokemon Card](./Assets/card-hover.png)
+![Pokemons Page](./Assets/pokemons.png)
 
 - **Detail of the pokemon**
 
 ![Detail of the pokemon](./Assets/detail.png)
 
+- **About Page**
+
+![About Page](./Assets/about.png)
 
 ## Built With
 
