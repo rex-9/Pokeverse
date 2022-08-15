@@ -20,6 +20,7 @@ textarea {
 
 #pokemons-container {
   display: flex;
+
   /* display: none; */
   flex-wrap: wrap;
   justify-content: center;
@@ -27,6 +28,7 @@ textarea {
 
 #about {
   display: none;
+
   /* display: block; */
   height: 83vh;
 }
@@ -121,7 +123,7 @@ button:hover {
 
 footer {
   position: relative;
-  top: 0px;
+  top: 0;
   margin: 0 0 15px 0;
   padding: 15px;
   border: 2px solid black;
@@ -210,10 +212,11 @@ ul {
 
 #modal {
   display: none;
+  width: 90vw;
   background-image: linear-gradient(to bottom right, red, orange, yellow, green, blue, indigo, violet);
   justify-content: center;
   position: fixed;
-  top: 80px;
+  top: 10px;
   color: black;
   border-radius: 10px;
   text-align: center;
@@ -239,8 +242,8 @@ ul {
 #abilities {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  width: 400px;
+  justify-content: space-around;
+  width: auto;
 }
 
 #abilities li {
@@ -280,7 +283,7 @@ ul {
 
   #modal {
     display: none;
-    justify-content: center;
+    width: auto;
     position: fixed;
     top: 10px;
     border-radius: 10px;
