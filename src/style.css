@@ -7,7 +7,7 @@ body {
   background: linear-gradient(to top right, #00cffd, #fff);
   margin: 0;
   padding: 0;
-  height: 100vh;
+  height: auto;
 }
 
 input,
