@@ -7,7 +7,7 @@ body {
   background: linear-gradient(to top right, #00cffd, #fff);
   margin: 0;
   padding: 0;
-  height: 100vh;
+  height: auto;
 }
 
 input,
@@ -20,6 +20,7 @@ textarea {
 
 #pokemons-container {
   display: flex;
+
   /* display: none; */
   flex-wrap: wrap;
   justify-content: center;
@@ -27,14 +28,14 @@ textarea {
 
 #about {
   display: none;
+
   /* display: block; */
   height: 83vh;
 }
 
 #about #footer {
   width: 100%;
-  position: absolute;
-  bottom: 100px;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,7 +44,7 @@ textarea {
 #about #bio {
   font-size: 20px;
   font-weight: bold;
-  padding: 100px;
+  padding: 30px;
   line-height: 20px;
 }
 
@@ -121,7 +122,9 @@ button:hover {
 }
 
 footer {
-  margin: 15px 0 15px 0;
+  position: relative;
+  top: 0;
+  margin: 0 0 15px 0;
   padding: 15px;
   border: 2px solid black;
 }
@@ -209,10 +212,11 @@ ul {
 
 #modal {
   display: none;
+  width: 90vw;
   background-image: linear-gradient(to bottom right, red, orange, yellow, green, blue, indigo, violet);
   justify-content: center;
   position: fixed;
-  top: 80px;
+  top: 10px;
   color: black;
   border-radius: 10px;
   text-align: center;
@@ -238,8 +242,8 @@ ul {
 #abilities {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  width: 400px;
+  justify-content: space-around;
+  width: auto;
 }
 
 #abilities li {
@@ -279,7 +283,7 @@ ul {
 
   #modal {
     display: none;
-    justify-content: center;
+    width: auto;
     position: fixed;
     top: 10px;
     border-radius: 10px;
@@ -291,8 +295,24 @@ ul {
     z-index: 10;
   }
 
+  #abilities {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 500px;
+  }
+
+  #about #bio {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 100px;
+    line-height: 20px;
+  }
+
   #about #footer {
     padding: 5px 0 5px 0;
+    position: relative;
+    top: 100px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
