@@ -74,13 +74,6 @@ Here is the online version of [Pokeverse](https://rex-9.github.io/Pokeverse/)
 👤 - Facebook: [Htet Naing](https://www.facebook.com/htetnaing0814)<br>
 👤 - Angelist: [Htet Naing](https://angel.co/u/rex9)<br>
 
-## Author2
-
-👤 - Github: [@Ibizugbe](https://github.com/Ibizugbe/)<br>
-👤 - LinkedIn: [Abraham Ibizugbe](https://www.linkedin.com/in/abraham-ibizugbe-763791115/)<br>
-👤 - Facebook: [Abraham Ibizugbe 0'Ibiz](https://web.facebook.com/aibizugbe)<br>
-👤 - Twitter: [Abrahamibizugbe](https://twitter.com/AbrahamIbizugbe)<br>
-
 ## 🤝 Contributions
 
 Contributions, issues, and feature requests are welcome!
