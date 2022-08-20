@@ -29,7 +29,7 @@
 
 ## Live Demo
 
-[Pokeverse](https://htetnaing0814.github.io/Pokeverse/)
+[Pokeverse](https://rex-9.github.io/Pokeverse/)
 
 ## Getting Started
 
@@ -37,7 +37,7 @@ To get a local copy up and running:
 
 1. Clone this repository or download the zip folder:
 
-**`git clone https://github.com/HtetNaing0814/Pokeverse.git`**
+**`git clone https://github.com/rex-9/Pokeverse.git`**
 
 2. Navigate to the location of the folder in your machine:
 
@@ -65,27 +65,20 @@ To get a local copy up and running:
 
 ### Deployment
 
-Here is the online version of [Pokeverse](https://htetnaing0814.github.io/Pokeverse/)
+Here is the online version of [Pokeverse](https://rex-9.github.io/Pokeverse/)
 
 ## Author1
 
-👤 - Github: [@HtetNaing0814](https://github.com/HtetNaing0814/)<br>
-👤 - LinkedIn: [Htet Naing](https://www.linkedin.com/in/htet-naing-b4882a1aa/)<br>
-👤 - Facebook: [Htet Naing](https://www.facebook.com/rexsoul1819)<br>
-👤 - Angelist: [Htet Naing](https://angel.co/u/htet-naing-2)<br>
-
-## Author2
-
-👤 - Github: [@Ibizugbe](https://github.com/Ibizugbe/)<br>
-👤 - LinkedIn: [Abraham Ibizugbe](https://www.linkedin.com/in/abraham-ibizugbe-763791115/)<br>
-👤 - Facebook: [Abraham Ibizugbe 0'Ibiz](https://web.facebook.com/aibizugbe)<br>
-👤 - Twitter: [Abrahamibizugbe](https://twitter.com/AbrahamIbizugbe)<br>
+👤 - Github: [@rex-9](https://github.com/rex-9/)<br>
+👤 - LinkedIn: [Htet Naing](https://www.linkedin.com/in/rex9/)<br>
+👤 - Facebook: [Htet Naing](https://www.facebook.com/htetnaing0814)<br>
+👤 - Angelist: [Htet Naing](https://angel.co/u/rex9)<br>
 
 ## 🤝 Contributions
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check [issue page](https://github.com/HtetNaing0814/Pokeverse/issues).
+Feel free to check [issue page](https://github.com/rex-9/Pokeverse/issues).
 
 ## Show your support
 
